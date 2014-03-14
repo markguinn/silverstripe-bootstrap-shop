@@ -1,6 +1,8 @@
-.productItem{
-	height:200px;
-	margin-bottom:15px;	
+.thumbnails > li.productItem {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	margin-bottom:15px;
 }
 
  .productItem .title{
@@ -17,3 +19,9 @@
  .filterbar{
  	margin-bottom:1em;
  }
+
+
+.productItem > a {
+	display: block;
+	text-align: center;
+}

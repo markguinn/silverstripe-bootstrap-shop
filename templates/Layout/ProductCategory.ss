@@ -1,4 +1,4 @@
-<% require themedCSS(productcategory) %>
+<% require css(themes/bootstrap_shop/css/productcategory.css) %>
 <div class="page-header">
 	<h1 class="pageTitle">$Title</h1>
 	$Breadcrumbs

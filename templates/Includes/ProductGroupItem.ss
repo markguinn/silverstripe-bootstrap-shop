@@ -1,4 +1,4 @@
-<div class="productItem span2 thumbnail">
+<li class="productItem span2 thumbnail">
 	<% if Image %>
 		<a href="$Link" title="<% sprintf(_t("READMORE","Click here to read more on &quot;%s&quot;"),$Title) %>">
 			<img src="$Image.Thumbnail.URL" alt="<% sprintf(_t("IMAGE","%s image"),$Title) %>" />
@@ -24,4 +24,4 @@
 			<% end_if %>
 		</div>
 	</div>
-</div>
+</li>

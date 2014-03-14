@@ -1,4 +1,4 @@
-<% require themedCSS(product) %>
+<% require css(themes/bootstrap_shop/css/product.css) %>
 <div class="row">
 	<div id="Sidebar" class="span2">
 		<% with Parent %>

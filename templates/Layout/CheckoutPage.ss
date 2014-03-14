@@ -1,4 +1,4 @@
-<% require ThemedCSS(checkout) %>
+<% require css(themes/bootstrap_shop/css/checkout.css) %>
 <h1>$Title</h1>
 
 <% if Cart %>

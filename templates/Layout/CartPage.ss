@@ -16,7 +16,7 @@
 	<h3>Get shipping estimate:</h3>
 	<% require themedCSS(shippingestimates) %>
 	$ShippingEstimateForm
-	<% include ShippingEstimates %>
+	<%--<% include ShippingEstimates %>--%>
 <% else %>
 	<div class="message warning alert alert-block alert-info">
 		<h4 class="alert-heading">Your cart is empty</h4>
@@ -40,5 +40,5 @@
 		</div>	
 	<% end_if %>
 </div>
-<% include RelatedItems %>
-<% include RecentlyViewedItems %>
+<%--<% include RelatedItems %>--%>
+<%--<% include RecentlyViewedItems %>--%>

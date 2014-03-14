@@ -1,4 +1,4 @@
-<% require themedCSS(cart) %>
+<% require css(themes/bootstrap_shop/css/cart.css) %>
 <table class="cart table table-bordered" summary="<% _t("TABLESUMMARY","Current contents of your cart.") %>">
 	<colgroup class="image"/>
 	<colgroup class="product title"/>
@@ -47,7 +47,7 @@
 					</a>
 				</td>
 			</tr>
-		<% end_if %><% end_control %>
+		<% end_if %><% end_loop %>
 	</tbody>
 	<tfoot>
 		<tr class="subtotal">
