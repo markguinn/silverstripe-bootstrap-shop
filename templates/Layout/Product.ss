@@ -27,37 +27,7 @@
 					<% if InternalItemID %><p><% _t("CODE","Product Code") %>: {$InternalItemID}</p><% end_if %>
 					<% if Model %><p><% _t("MODEL","Model") %>: $Model.XML</p><% end_if %>
 					<% if Size %><p><% _t("SIZE","Size") %>: $Size.XML</p><% end_if %>
-					<% if Variations %>
-						$VariationForm
-					<% else %>
-						<% if Price %>
-							<% include PriceTag %>
-						<% end_if %>
-						<% if canPurchase %>
-							<% if IsInCart %>
-								<% with Item %>
-									<div class="quantityBox">
-										<span><% _t("QUANTITYCART","Quantity in cart") %>:</span> $QuantityField
-										<div class="productActions">
-											<a class="btn" href="$removeallLink" title="<% sprintf(_t("REMOVE","Remove &quot;%s&quot; from your cart"),$Title) %>">
-												<i class="icon-trash"></i>
-												<% _t("REMOVELINK","Remove from cart") %>
-											</a>
-											<a class="btn btn-success" href="$checkoutLink" title="<% _t("GOTOCHECKOUT","Go to the checkout now") %>">
-												<i class="icon-shopping-cart icon-white"></i>
-												<% _t("GOTOCHECKOUTLINK","Go to the checkout") %>
-											</a>
-										</div>
-									</div>
-								<% end_with %>
-							<% else %>
-								<a href="$addLink" class="btn btn-success btn-large" title="<% sprintf(_t("ADD","Add &quot;%s&quot; to your cart"),$Title) %>">
-									<i class="icon-plus-sign icon-white"></i>
-									<% _t("ADDLINK","Add to Cart") %>
-								</a>
-							<% end_if %>
-						<% end_if %>
-					<% end_if %>
+					<% include ProductAddToCart %>
 					<div class="productContent">
 						$Content
 					</div>
@@ -69,3 +39,9 @@
 		<% include SideCart %>
 	</div>
 </div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery(document).pullRegionForURL('/shoppingcart/*', 'ProductAddToCart:BUYABLE');
+	});
+</script>

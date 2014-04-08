@@ -1,5 +1,5 @@
 <% require css(themes/bootstrap_shop/css/cart.css) %>
-<table class="cart table table-bordered" summary="<% _t("TABLESUMMARY","Current contents of your cart.") %>">
+<table data-ajax-region="Cart" class="cart table table-bordered" summary="<% _t("TABLESUMMARY","Current contents of your cart.") %>">
 	<colgroup class="image"/>
 	<colgroup class="product title"/>
 	<colgroup class="unitprice" />
@@ -42,7 +42,7 @@
 				<td>$QuantityField</td>
 				<td id="$TableTotalID">$Total.Nice</td>
 				<td>
-					<a href="$removeallLink" title="<% sprintf(_t("REMOVEALL","Remove all of &quot;%s&quot; from your cart"),$TableTitle) %>">
+					<a href="$removeallLink" class="ajax" title="<% sprintf(_t("REMOVEALL","Remove all of &quot;%s&quot; from your cart"),$TableTitle) %>">
 						<i class="icon-trash"></i>
 					</a>
 				</td>

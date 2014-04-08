@@ -40,3 +40,9 @@
 		<% include SideCart %>
 	</div>
 </div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery(document).pullRegionForURL('/shoppingcart/*', 'ProductGroupItem:BUYABLE');
+	});
+</script>

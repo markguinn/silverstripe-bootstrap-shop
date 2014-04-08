@@ -42,3 +42,9 @@
 </div>
 <%--<% include RelatedItems %>--%>
 <%--<% include RecentlyViewedItems %>--%>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery(document).pullRegionForURL('/shoppingcart/*', 'Cart:CART');
+	});
+</script>

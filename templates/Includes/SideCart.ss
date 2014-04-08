@@ -1,4 +1,5 @@
-<% if Cart %>
+<div data-ajax-region="SideCart">
+<% if Cart && Cart.Items.Count %>
 	<% with Cart %>
 	<div class="sidecart">
 		<% if Items %>
@@ -17,7 +18,7 @@
 							<% end_if %>
 						</h5>
 						<div class="pull-right">
-							<a class="remove" href="$removeallLink" title="<% sprintf(_t("REMOVEALL","remove from cart"),$TableTitle) %>">
+							<a class="remove ajax" href="$removeallLink" title="<% sprintf(_t("REMOVEALL","remove from cart"),$TableTitle) %>">
 								<i class="icon-trash"></i>
 							</a>
 						</div>
@@ -43,5 +44,5 @@
    		<h4 class="alert-heading">Empty Cart</h4>
     	<% _t("NOITEMS","There are no items in your cart") %>.
     </div>
-
 <% end_if %>
+</div>
