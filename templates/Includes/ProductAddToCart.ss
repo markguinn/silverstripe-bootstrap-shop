@@ -1,6 +1,6 @@
-<div id="ProductAddToCart">
+<div id="ProductAddToCart$ID">
 	<% if Variations %>
-		$VariationForm
+		$Form
 	<% else %>
 		<% if Price %>
 			<% include PriceTag %>

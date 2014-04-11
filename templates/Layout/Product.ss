@@ -42,6 +42,8 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-		jQuery(document).pullRegionForURL('/shoppingcart/*', 'ProductAddToCart:BUYABLE');
+		jQuery(document)
+			.pullRegionForURL('/shoppingcart/*', 'ProductAddToCart')
+			.pullRegionForURL(document.location.pathname + 'Form', 'ProductAddToCart');
 	});
 </script>

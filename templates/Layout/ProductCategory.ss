@@ -43,6 +43,6 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-		jQuery(document).pullRegionForURL('/shoppingcart/*', 'ProductGroupItem:BUYABLE');
+		jQuery(document).pullRegionForURL('/shoppingcart/*', 'ProductGroupItem:PRODUCT');
 	});
 </script>
